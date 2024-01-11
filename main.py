@@ -6,9 +6,11 @@ import sys
 
 
 class SEPROMPanicDecrypt:
+    _soc = ""
     _panic = b""
     _keys = []
     _is_32bit = False
+    _is_old_style_panic = False
 
     def __init__(self, soc, panic):
 
@@ -16,6 +18,8 @@ class SEPROMPanicDecrypt:
         soc_int = int(self._soc[1:], 16)
         if soc_int < 0x8015:
             self._is_32bit = True
+        if soc_int < 0x8000:
+            self._is_old_style_panic = True
         self._panic = bytes.fromhex(panic)
         self._keys = {
             "t7000": bytes.fromhex("1a3f5e7c676ae321cc3d501212c36a21b453f6788dfe32f154a210fa92b36e21"),     # a8
@@ -48,13 +52,25 @@ class SEPROMPanicDecrypt:
 
     def trng_key(self):
         trng_key = self._panic[:8]
-        self._panic = self._panic[8:]
+        self._panic = self._panic[8:] if not self._is_old_style_panic else self._panic
         return trng_key
 
     def create_encrypt_data(self, index):
         return index.to_bytes(8, 'little') + self._trng_key
 
+    def decrypt_old(self):
+        aes = AES.new(self._key, AES.MODE_CBC, self._iv)
+        decrypted_data = aes.decrypt(self._panic)
+        for i in range(0, len(self._panic), 4):
+            result = int.from_bytes(decrypted_data[i:(i + 4)], byteorder="little")
+            print(f"0x{result:08X}")
+
+
     def decrypt(self):
+
+        if self._is_old_style_panic:
+            self.decrypt_old()
+            return
 
         loop_len = (int((len(self._panic) / 8) / 2))
         for i in range(0, loop_len, 1):
