@@ -16,8 +16,10 @@ class SEPROMPanicDecrypt:
 
         self._soc = soc.lower()
         soc_int = int(self._soc[1:], 16)
-        if soc_int < 0x8015 and soc != 0x8006:
+        if soc_int < 0x8015:
             self._is_32bit = True
+        if soc_int == 0x8006:
+            self._is_32bit = False
         if soc_int < 0x8000:
             self._is_old_style_panic = True
         self._panic = bytes.fromhex(panic)
