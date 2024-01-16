@@ -43,11 +43,11 @@ panic(cpu 0 caller 0xfffffff0219d867c): "SEP ROM boot panic. 0xB9FD8EA50D398BCBA
 * a14
 * M1
 * a15
+* a16
 * M2
 
 ## Unsupported SoC's:
 * T2 Chip
 * a11
-* a16
 * M3
 * a17
