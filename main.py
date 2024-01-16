@@ -41,7 +41,7 @@ class SEPROMPanicDecrypt:
             "t8103": bytes.fromhex("d3a3e9b2920d8da5767a5a31ebaa1022b2ba25d8dd7df1afea4735b84f46e7fc"),     # M1
             "t8110": bytes.fromhex("ab7be133e8a3a2f7d16bf9a8e6d23c66b86271e0572d47f623e2de4485c674c3"),     # a15
             "t8112": bytes.fromhex("500e80afe77ededb439cc278dfb018b9a7b14606743baa69d0af9e72b6ac802a"),     # M2
-            # "t8120": bytes.fromhex("?"),                                                                  # a16
+            "t8120": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),     # a16
             # "t8122": bytes.fromhex("?"),                                                                  # M3
             # "t8130": bytes.fromhex("?"),                                                                  # a17
         }
