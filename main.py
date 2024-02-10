@@ -26,22 +26,26 @@ class SEPROMPanicDecrypt:
         self._keys = {
             "t7000": bytes.fromhex("1a3f5e7c676ae321cc3d501212c36a21b453f6788dfe32f154a210fa92b36e21"),     # a8
             "t7001": bytes.fromhex("1a3f5e7c676ae321cc3d501212c36a21b453f6788dfe32f154a210fa92b36e21"),     # a8x
+            "t8002": bytes.fromhex("bc8ec9cd60a3e2fb78973bba741023ec6d65179107145dd3ad5badec739df748"),     # S1P/S2 Watch
+            "t8004": bytes.fromhex("3e652b6cf4dd293105068fb20773fde4eca1a7056dc50c139076b54bd3e51fd9"),     # S3 Watch
             "s8000": bytes.fromhex("ac884aef3f99476caf8f1254158bbf3dd3e48446c8e906e1c224a8c6318e4589"),     # a9(Samsung)
             "s8001": bytes.fromhex("ac884aef3f99476caf8f1254158bbf3dd3e48446c8e906e1c224a8c6318e4589"),     # a9x
             "s8003": bytes.fromhex("ac884aef3f99476caf8f1254158bbf3dd3e48446c8e906e1c224a8c6318e4589"),     # a9(TSMC)
-            "t8006": bytes.fromhex("99f095abe48158ee3a0c72035f06ac3fdd1a5ff66365795ecbbe2e24d35c5315"),     # S4/S5
+            "t8006": bytes.fromhex("99f095abe48158ee3a0c72035f06ac3fdd1a5ff66365795ecbbe2e24d35c5315"),     # S4/S5 Watch
             "t8010": bytes.fromhex("ca80933cb9368b168f5a0699f9eea44079fe9e89f0df5db12dc2fe67cfd8350c"),     # a10
             "t8011": bytes.fromhex("6f94ca7e9e97e9cdb68099ccd8943937758011a853d2f9be5bedb317357be675"),     # a10x
             # "t8012": bytes.fromhex("?"),                                                                  # T2 Chip
             # "t8015": bytes.fromhex("?"),                                                                  # a11
             "t8020": bytes.fromhex("2e2e535499d89b8f997ebc8dc1e1122b0aa97f9401be4275c10934002d6a779f"),     # a12
-            "t8027": bytes.fromhex("f0ee42ef0504e17258c2379113effe6a8ef3e11a8bec2156c2e88203b6665023"),     # a12z/x
+            "t8027": bytes.fromhex("f0ee42ef0504e17258c2379113effe6a8ef3e11a8bec2156c2e88203b6665023"),     # a12z/a12x/DTK
             "t8030": bytes.fromhex("8d12eb734a8550ad37b68b260ef74211217bddc0a5b09fae09bd26b7b1cfcf68"),     # a13
             "t8101": bytes.fromhex("79d0ae2369a6dc8866deb5aa19fc696e62eb0d6940677bec25f144dcada93be1"),     # a14
             "t8103": bytes.fromhex("d3a3e9b2920d8da5767a5a31ebaa1022b2ba25d8dd7df1afea4735b84f46e7fc"),     # M1
+            "t8301": bytes.fromhex("22566afd4748956a7708996b888e2da6c0fe4797da958474cafce1e87dbf31cd"),     # S6/S7/S8 Watch
             "t8110": bytes.fromhex("ab7be133e8a3a2f7d16bf9a8e6d23c66b86271e0572d47f623e2de4485c674c3"),     # a15
             "t8112": bytes.fromhex("500e80afe77ededb439cc278dfb018b9a7b14606743baa69d0af9e72b6ac802a"),     # M2
             "t8120": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),     # a16
+            # "t8310": bytes.fromhex("?"),                                                                  # S9 Watch
             # "t8122": bytes.fromhex("?"),                                                                  # M3
             # "t8130": bytes.fromhex("?"),                                                                  # a17
         }
