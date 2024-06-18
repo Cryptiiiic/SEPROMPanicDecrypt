@@ -47,7 +47,7 @@ class SEPROMPanicDecrypt:
             "t8120": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),     # a16
             # "t8310": bytes.fromhex("?"),                                                                  # S9 Watch
             # "t8122": bytes.fromhex("?"),                                                                  # M3
-            # "t8130": bytes.fromhex("?"),                                                                  # a17
+            "t8130": bytes.fromhex("80176709106178272ee78e1be5717555e9ecbf467541fd6f71990ca04372c4bf"),     # a17
         }
         if self._soc not in self._keys:
             print(f"\nUnsupported SoC: ({self._soc})!")
