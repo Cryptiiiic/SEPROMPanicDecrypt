@@ -37,6 +37,7 @@ panic(cpu 0 caller 0xfffffff0219d867c): "SEP ROM boot panic. 0xB9FD8EA50D398BCBA
 * S4/S5
 * a10
 * a10x
+* T2 Chip
 * a12
 * a12z/x
 * a13
@@ -48,8 +49,7 @@ panic(cpu 0 caller 0xfffffff0219d867c): "SEP ROM boot panic. 0xB9FD8EA50D398BCBA
 * a17
 
 ## Unsupported SoC's:
-* T2 Chip
 * a11
-* S9 Watch
+* S9/S10 Watch
 * M3
 * M4
