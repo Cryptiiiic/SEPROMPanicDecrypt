@@ -47,6 +47,9 @@ class SEPROMPanicDecrypt:
             "t8120": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),     # a16
             # "t8310": bytes.fromhex("?"),                                                                  # S9/S10 Watch
             # "t8122": bytes.fromhex("?"),                                                                  # M3
+            "t6031": bytes.fromhex("31e8364be1d086ddb8cd0b23462faf0f21ac7f0f67f30087153631b176b22013"),     # M3 Max(Binning 1)
+            "t6032": bytes.fromhex("90cc983c7fde2b5a94f0b57b09c3041900a24dcf5627b84b6220a90d21104f27"),     # M3 Ultra
+            "t6034": bytes.fromhex("a164a5123d2a9ca2fbfbdd312acfcc10f418a869faddd24ae56c6afda95f5145"),     # M3 Max(Binning 2)
             "t8130": bytes.fromhex("80176709106178272ee78e1be5717555e9ecbf467541fd6f71990ca04372c4bf"),     # a17
             # "t8140": bytes.fromhex("?"),                                                                  # a18
             # "t8132": bytes.fromhex("?"),                                                                  # M4
@@ -112,7 +115,6 @@ class SEPROMPanicDecrypt:
                 result2 = int.from_bytes(result2, "little")
                 result3 = int.from_bytes(result3, "little")
                 result4 = int.from_bytes(result4, "little")
-
                 print(f"0x{result1:08X}")
                 print(f"0x{result2:08X}")
                 print(f"0x{result3:08X}")
@@ -120,7 +122,6 @@ class SEPROMPanicDecrypt:
             else:
                 result1 = int.from_bytes(result1, "little")
                 result2 = int.from_bytes(result2, "little")
-
                 print(f"0x{result1:016X}")
                 print(f"0x{result2:016X}")
             del aes
