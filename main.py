@@ -26,7 +26,7 @@ class SEPROMPanicDecrypt:
         self._keys = {
             "t7000": bytes.fromhex("1a3f5e7c676ae321cc3d501212c36a21b453f6788dfe32f154a210fa92b36e21"),     # a8
             "t7001": bytes.fromhex("1a3f5e7c676ae321cc3d501212c36a21b453f6788dfe32f154a210fa92b36e21"),     # a8x
-            "t8002": bytes.fromhex("bc8ec9cd60a3e2fb78973bba741023ec6d65179107145dd3ad5badec739df748"),     # S1P/S2 Watch
+            "t8002": bytes.fromhex("bc8ec9cd60a3e2fb78973bba741023ec6d65179107145dd392a8dd8a485fc45c"),     # S1P/S2 Watch
             "t8004": bytes.fromhex("3e652b6cf4dd293105068fb20773fde4eca1a7056dc50c139076b54bd3e51fd9"),     # S3 Watch
             "s8000": bytes.fromhex("ac884aef3f99476caf8f1254158bbf3dd3e48446c8e906e1c224a8c6318e4589"),     # a9(Samsung)
             "s8001": bytes.fromhex("ac884aef3f99476caf8f1254158bbf3dd3e48446c8e906e1c224a8c6318e4589"),     # a9x
