@@ -35,7 +35,7 @@ class SEPROMPanicDecrypt:
             "t8010": bytes.fromhex("ca80933cb9368b168f5a0699f9eea44079fe9e89f0df5db12dc2fe67cfd8350c"),     # a10
             "t8011": bytes.fromhex("6f94ca7e9e97e9cdb68099ccd8943937758011a853d2f9be5bedb317357be675"),     # a10x
             "t8012": bytes.fromhex("8246a778fa535cfe21f754c5298ed043302d2792425597b7cf2c35545a72fe48"),     # T2 Chip
-            # "t8015": bytes.fromhex("?"),                                                                  # a11
+            "t8015": bytes.fromhex("e5bbbebe5295a205885e6e47362dbb6b25aa66349f0e2b329683a384c724280f"),     # a11
             "t8020": bytes.fromhex("2e2e535499d89b8f997ebc8dc1e1122b0aa97f9401be4275c10934002d6a779f"),     # a12
             "t8027": bytes.fromhex("f0ee42ef0504e17258c2379113effe6a8ef3e11a8bec2156c2e88203b6665023"),     # a12z/a12x/DTK
             "t8030": bytes.fromhex("8d12eb734a8550ad37b68b260ef74211217bddc0a5b09fae09bd26b7b1cfcf68"),     # a13
