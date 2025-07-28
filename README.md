@@ -34,17 +34,20 @@ panic(cpu 0 caller 0xfffffff0219d867c): "SEP ROM boot panic. 0xB9FD8EA50D398BCBA
 * a9(Samsung)
 * a9x
 * a9(TSMC)
-* S4/S5
+* S4/S5 Watch
+* S1p/S2 Watch/T1 Chip
 * a10
 * a10x
 * T2 Chip
+* a11
 * a12
 * a12z/x
 * a13
 * a14
 * M1
 * a15
-* a16
+* a16(A0)
+* a16(B1)
 * M2
 * a17
 * M3 Max(Binning 1)
@@ -52,7 +55,6 @@ panic(cpu 0 caller 0xfffffff0219d867c): "SEP ROM boot panic. 0xB9FD8EA50D398BCBA
 * M3 Max(Binning 2)
 
 ## Unsupported SoC's:
-* a11
 * S9/S10 Watch
 * M3
 * M4
