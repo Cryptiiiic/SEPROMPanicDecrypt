@@ -15,7 +15,7 @@ class SEPROMPanicDecrypt:
     def __init__(self, soc, panic):
 
         self._soc = soc.lower()
-        soc_int = int(self._soc[1:], 16)
+        soc_int = int(self._soc[1:], 16) if "-" not in self._soc else int(self._soc[1:5], 16)
         if soc_int < 0x8015:
             self._is_32bit = True
         if soc_int == 0x8006:
@@ -44,7 +44,9 @@ class SEPROMPanicDecrypt:
             "t8301": bytes.fromhex("22566afd4748956a7708996b888e2da6c0fe4797da958474cafce1e87dbf31cd"),     # S6/S7/S8 Watch
             "t8110": bytes.fromhex("ab7be133e8a3a2f7d16bf9a8e6d23c66b86271e0572d47f623e2de4485c674c3"),     # a15
             "t8112": bytes.fromhex("500e80afe77ededb439cc278dfb018b9a7b14606743baa69d0af9e72b6ac802a"),     # M2
-            "t8120": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),     # a16
+            "t8120": bytes.fromhex("52013B5E9D455342C0F18A880AE058DCD773DD9DCCD37B999B95F7699429F161"),     # a16
+            "t8120-a0": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),     # a16
+            "t8120-b1": bytes.fromhex("52013B5E9D455342C0F18A880AE058DCD773DD9DCCD37B999B95F7699429F161"),     # a16
             # "t8310": bytes.fromhex("?"),                                                                  # S9/S10 Watch
             # "t8122": bytes.fromhex("?"),                                                                  # M3
             "t6031": bytes.fromhex("31e8364be1d086ddb8cd0b23462faf0f21ac7f0f67f30087153631b176b22013"),     # M3 Max(Binning 1)
@@ -132,7 +134,7 @@ def main():
         argv0 = sys.argv[0]
         print(f"Usage: {argv0} <SoC> <SEPROM Panic Bytes>")
         exit(-1)
-    if len(sys.argv[1]) < 5 or len(sys.argv[1]) >= 7:
+    if len(sys.argv[1]) < 5 or (len(sys.argv[1]) >= 7 and "-" not in sys.argv[1]):
         argv1 = sys.argv[1]
         print(f"\nInvalid SoC: ({argv1})!")
         exit(-2)
