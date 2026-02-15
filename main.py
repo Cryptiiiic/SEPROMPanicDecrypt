@@ -45,16 +45,16 @@ class SEPROMPanicDecrypt:
             "t8110": bytes.fromhex("ab7be133e8a3a2f7d16bf9a8e6d23c66b86271e0572d47f623e2de4485c674c3"),     # a15
             "t8112": bytes.fromhex("500e80afe77ededb439cc278dfb018b9a7b14606743baa69d0af9e72b6ac802a"),     # M2
             "t8120": bytes.fromhex("52013B5E9D455342C0F18A880AE058DCD773DD9DCCD37B999B95F7699429F161"),     # a16
-            "t8120-a0": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),     # a16
-            "t8120-b1": bytes.fromhex("52013B5E9D455342C0F18A880AE058DCD773DD9DCCD37B999B95F7699429F161"),     # a16
+            "t8120-a0": bytes.fromhex("e8328be4ce028abb239c2ba87297a0a645bddabcce10a3ee3c9b1e3cb92c4bf6"),  # a16
+            "t8120-b1": bytes.fromhex("52013B5E9D455342C0F18A880AE058DCD773DD9DCCD37B999B95F7699429F161"),  # a16
             # "t8310": bytes.fromhex("?"),                                                                  # S9/S10 Watch
             # "t8122": bytes.fromhex("?"),                                                                  # M3
             "t6031": bytes.fromhex("31e8364be1d086ddb8cd0b23462faf0f21ac7f0f67f30087153631b176b22013"),     # M3 Max(Binning 1)
             "t6032": bytes.fromhex("90cc983c7fde2b5a94f0b57b09c3041900a24dcf5627b84b6220a90d21104f27"),     # M3 Ultra
             "t6034": bytes.fromhex("a164a5123d2a9ca2fbfbdd312acfcc10f418a869faddd24ae56c6afda95f5145"),     # M3 Max(Binning 2)
-            "t8130": bytes.fromhex("80176709106178272ee78e1be5717555e9ecbf467541fd6f71990ca04372c4bf"),     # a17
+            "t8130": bytes.fromhex("80176709106178272ee78e1be5717555e9ecbf467541fd6f71990ca04372c4bf"),     # a17 Pro
             # "t8140": bytes.fromhex("?"),                                                                  # a18
-            # "t8132": bytes.fromhex("?"),                                                                  # M4
+            "t8132": bytes.fromhex("de9f4b397e776525084fdb84e445c5e150b771864bc5a4828458fe57efc9347b"),     # M4
         }
         if self._soc not in self._keys:
             print(f"\nUnsupported SoC: ({self._soc})!")
