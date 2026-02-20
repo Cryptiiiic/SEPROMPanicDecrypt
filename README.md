@@ -49,12 +49,26 @@ panic(cpu 0 caller 0xfffffff0219d867c): "SEP ROM boot panic. 0xB9FD8EA50D398BCBA
 * a16(A0)
 * a16(B1)
 * M2
-* a17
+* a17 Pro
 * M3 Max(Binning 1)
 * M3 Ultra
 * M3 Max(Binning 2)
+* M4
 
 ## Unsupported SoC's:
+* M1 Pro
+* M1 Max
+* M1 Ultra
 * S9/S10 Watch
+* M2 Pro
+* M2 Max
+* M2 Ultra
 * M3
-* M4
+* M3 Pro
+* a18
+* a18 Pro
+* M4 Pro
+* M4 Max
+* M5
+* a19
+* a19 Pro
